@@ -8,8 +8,8 @@ public class SimpleCalc {
             System.out.println("Enter Second Number : ");
             float b = sc.nextFloat();
             System.out.println("Enter Operator(+,-,*,/) : ");
-            String op = sc.next();
-            switch (op) {
+            String operation = sc.next();
+            switch (operation) {
                 case "+":
                     System.out.println("Addition : "+(a+b));
                     break;
