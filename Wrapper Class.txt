@@ -1,0 +1,73 @@
+----- Wrapper Class [ 03/04 ] -----
+- provide the mechanism to convert primitive into object and object into primitive.
+- Since J2SE 5.0. auto boxing and unboxing figure convert primitive into objects and objects into 
+primitives automatically. The automatically conversion of primitive into an object is known as auto boxing
+and vice-versa unboxing. 
+
+--- Auto boxing ---
+- The automatic conversion of primitive data type into its corresponding wrapper class known as auto boxing.
+- Example : (Primitive to wrapper)
+public class WrapperExample1{
+    public static void  main(String[] args){
+        //Converting int into Integer
+        int a = 20;
+        Integer i = Integer.valueOf(a);//Converting into Integer Explicitly
+        Integer j = a;//auto boxing compiler new complier will Integer.valueOf(a) internally
+        System.out.print(a+" "+i+" "+j);
+    }
+}
+// Output : 20 20 20
+
+--- Unboxing ---
+- conversion of wrapper type into its corresponding primitive type.
+- Example : (Wrapper to primitive)
+public class WrapperExample2{
+    public static void main(String[] args){
+        //Conversion Integer to int
+        Integer a = new Integer(3);
+        int i = a.intValue();//converting Integer to int Explicitly
+        int j = a;//unboxing. now complier will write a.intValue() internally.
+        System.out.print(a+" "+i+" "+j);
+    }
+}
+// Output : 3 3 3 
+
+----- Difference between Char & String -----
+Char : the syntax to declare a char value is [char a = 'a';]
+String : the syntax to declare a string value is [String s = "Hello";]
+Char : if we try to define multiple characters we need array of char and each char store in different index.
+String : string is collection of characters define under a single variable and the location of the particular character can be retrieved using String class methods or perticular character of during can be access using string class methods.
+Char : white space character are not counted in char datatype.
+String : white space character are counted in stings.
+Char : Char is primitive datatype 
+String : String is non primitive datatype.
+Char : it has wrapper class named Character.
+String : it self is wrapper class. which is used as datatype also.
+
+- Creating a String:
+String literal :- [ String s = "Hello"; ]
+Using new keyword :- [ String s = new String("Hello"); ]
+
+--- Java String class methods ---
+Method : char charAt(int index)
+Description : It returns char value for the particular index.
+Method : int length()
+Description : It returns string length
+Method : String substring(int beginIndex)
+Description : It returns substring for given begin index.
+Method : String substring(int beginIndex, int endIndex)
+Description : It returns substring for given begin index and end index.
+Method : boolean contains(CharSequence s)
+Description : It returns true or false after matching the sequence of char value.
+Method : boolean equals(Object another)
+Description : It checks the equality of string with the given object.
+Method : boolean inEmpty()
+Description : It checks if string is empty.
+Method : String conceit(String str)
+Description : It concatenates the specified string.
+Method : String replace(char old, char new)
+Description : It replace all occurrences of the specified CharSequence.
+Method : static String equalsIgnoreCase(String another)
+Description : It compares another string. It doesn't check case.
+Method : int indexOf(int ch)
+Description : It returns the specified char value index.

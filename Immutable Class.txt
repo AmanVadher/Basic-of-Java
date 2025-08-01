@@ -1,0 +1,43 @@
+----- Immutable Class [ 27/03 ] -----
+Immutable Class' value can not be changed.
+Declare the class as final so it cannot be extended.
+all class member should be private so they cannot be accessed outside of class.
+class member are only initialized in class.
+
+--- This Keyword ---
+Reference variable that refers to the current object.
+
+Example:
+ArrayObj(double rate, String name, int id){
+    this.rate = rate;
+    this.name = name;
+    this.id = id;
+}
+
+-- Usage:
+1. this can be used to refer current class interface variable.
+2. this can be used to invoke current class method(implicitly).
+3. invoke current class constructor.
+4. passed as an argument in the method call.
+5. passed as argument in the constructor call.
+6. return the current class instance from the method.
+
+--- Accessing private members in class ---
+When ever variable of class is declared private that is (private datatype variableName;) then you can not
+access that variable directly in the main function even with the help of object.
+
+-- Solution to this is as follows:
+1. Usage of parameterized constructor just to initialize the values.
+2. Assign the private variable to a public variable of the same class.
+    Ex: private int a;
+        int b = a;
+        // use variable b everywhere
+        // this hold true when a is in class
+3. compulsorily follow for dynamic usage.
+    -declare a public method in which you can directly use variable a for initializing for performing
+    operation on it.
+    -public method can void or any return type parameterized or non-parameterized.
+    -call this method in main function thought object a to access variable name.
+    -Note:Static private variable can be access thought static methods only.
+    -Similarly when a class method is declared private you need to create a public method, call the
+    private method call private method a inside b and then call public method b in the main function.

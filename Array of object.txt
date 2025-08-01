@@ -1,0 +1,20 @@
+----- Lacture [ 27/03 ] -----
+
+object[0]-Variable 1
+          Variable 2
+        
+Object[1]-Variable 1
+          Variable 2
+        
+Object[2]-Variable 1
+          Variable 2
+
+Syntax:
+ClassName obj[] = new ClassName[array_lenght];  OR
+ClassNmae[] objArray;
+
+Example:
+Employee department1[20];
+Employee department2[20];
+Employee department3[20];
+

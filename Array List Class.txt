@@ -1,0 +1,28 @@
+----- Array List Class [ 24/04 ] -----
+
+--- The important points about the Java ArrayList class are:
+- Java ArrayList Class can contains duplicate elements.
+- Java ArrayList class maintains insertion order.
+- Java ArrayList class is non synchronized.
+- Java Array List allows random access because the array works on an index basis.
+- In Array List, manipulation is a little bit slower then the LinkedList in Java because a lot of
+shifting needs to occur if any element is removed from the array list.
+- We can not create an array list of the primitive type, such as int, float, char, etc. It is required
+to use the required wrapper class in such cases.
+
+---- iterator ----
+//Traversing list through Iterator
+Iterator itr = list.iterator();
+while(itr.hasNext){
+    System.out.print(itr.next());
+}
+
+---- Foreach loop ----
+for(String fruit:list){
+    System.out.print(fruit);
+}
+
+---- sort arraylist ----
+Collection.sort(list);
+for(Interger number.list)
+    System.out.print(number);

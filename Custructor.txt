@@ -1,0 +1,17 @@
+----- Constructor -----
+Constructor has same name as class.
+There is no return type for constructor including void.
+if you have not create constructor explicitly then compiler assume that is default constructor.
+we can't call constructor inside constructor.
+
+----- Differentiate: Method & Constructor -----
+Method: Method name can be decided by user.
+Const: Name and class name should be same compulsorily
+Method: needs to be explicitly called.
+Const: is called implicitly during the object creation.
+Method: has return type.
+Const: doesn't have return type.
+Method: we can call a method in the constructor. 
+Const: we can't call constructor in constructor.
+Method: when method are same name that is method overloading we need to change return type/parameters.
+Const: in overloading we can create multiple constructor with only different parameters.

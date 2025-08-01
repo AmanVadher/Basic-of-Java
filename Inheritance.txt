@@ -1,0 +1,8 @@
+----- Inheritance in Java [29/04] -----
+
+-Inheritance in java is a mechanism in which one object acquires all the properties and behaviors of a
+parent object. It is an important part of OOPs.
+-When you inherit from an existing class, you can reuse methods and felids of the parent class. Moreover,
+you can add new methods and felids in your current class also.
+-Inheritance represents the IS-A relationship which is also known as a parent child relationship.
+

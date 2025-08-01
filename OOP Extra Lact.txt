@@ -1,0 +1,147 @@
+Question 1
+
+Java is a versatile, object-oriented programming language known for its platform independence, robustness, and ease of use. Its key characteristics include:
+
+Platform Independence: Java programs can run on any device with a Java Virtual Machine (
+JVM), making them platform-independent.
+
+Object-Oriented: Java follows the object-oriented programming (OOP) paradigm, emphasizing modular, reusable code through objects and classes.
+Robustness: Java's strong memory management, exception handling, and type checking contribute to its robustness, reducing the likelihood of runtime errors.
+Security: Java's built-in security features, such as bytecode verification and sandboxing, make it suitable for developing secure applications, especially for the web.
+Portability: Java's "write once, run anywhere" philosophy allows developers to write code on one platform and run it on any other compatible platform without modification.
+Multithreading: Java supports multithreading, enabling concurrent execution of multiple tasks within a single program, enhancing performance and responsiveness.
+Rich API: Java provides a vast library of APIs (Application Programming Interfaces) covering various functionalities, from networking and database access to GUI development.
+High Performance: With advanced features like Just-In-Time (JIT) compilation and efficient garbage collection, Java offers high performance suitable for enterprise-level applications.
+
+Question 2
+
+public class ArrayOperations {
+    public static void main(String[] args) {
+        int[] array = {5, 10, 3, 8, 20, 15, 7, 12, 25, 18};
+        System.out.println("Sum of all elements: " + add(array));
+        System.out.println("Maximum element: " + max(array));
+        int key = 20;
+        int index = search(array, key);
+        if(index != -1) {
+            System.out.println(key + " found at index " + index);
+        } else {
+            System.out.println(key + " not found in the array.");
+        }
+    }
+    public static int add(int[] array) {
+        int sum = 0;
+        for(int num : array) {
+            sum += num;
+        }
+        return sum;
+    }
+    public static int max(int[] array) {
+        int max = array[0];
+        for(int i = 1; i < array.length; i++) {
+            if(array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+    public static int search(int[] array, int key) {
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] == key) {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+
+Question 3
+
+public class FirstNPrimes {
+    public static void main(String[] args) {
+        int n = 10;
+        displayFirstNPrimes(n);
+    }
+    public static void displayFirstNPrimes(int n) {
+        int count = 0;
+        int num = 2;        
+        System.out.println("First " + n + " prime numbers:");        
+        while(count < n) {
+            if(isPrime(num)) {
+                System.out.print(num + " ");
+                count++;
+            }
+            num++;
+        }
+    }
+    public static boolean isPrime(int num) {
+        if(num <= 1) {
+            return false;
+        }
+        for(int i = 2; i <= Math.sqrt(num); i++) {
+            if(num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+Question 4
+
+public class Rectangle {
+    private int length;
+    private int width;
+    public Rectangle() {
+        length = 0;
+        width = 0;
+    }
+    public Rectangle(int length, int width) {
+        this.length = length;
+        this.width = width;
+    }
+    public int getArea() {
+        return length * width;
+    }
+    public int getLength() {
+        return length;
+    }
+    public void setLength(int length) {
+        this.length = length;
+    }
+    public int getWidth() {
+        return width;
+    }
+    public void setWidth(int width) {
+        this.width = width;
+    }
+    public static void main(String[] args) {
+        Rectangle rectangle1 = new Rectangle(); 
+        System.out.println("Area of rectangle1: " + rectangle1.getArea());
+        Rectangle rectangle2 = new Rectangle(5, 10);
+        System.out.println("Area of rectangle2: " + rectangle2.getArea()); 
+    }
+}
+
+Question 5
+
+public class PalindromeCheck {
+    
+    public static void main(String[] args) {
+        int number = 12321;
+        if(isPalindrome(number)) {
+            System.out.println(number + " is a palindrome.");
+        } else {
+            System.out.println(number + " is not a palindrome.");
+        }
+    }
+    public static boolean isPalindrome(int number) {
+        int originalNumber = number;
+        int reverse = 0;        
+        while(number != 0) {
+            int digit = number % 10;
+            reverse = reverse * 10 + digit;
+            number /= 10;
+        }
+        return originalNumber == reverse;
+    }
+}
